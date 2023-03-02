@@ -26,6 +26,30 @@ body {
 
 }
 
+/* || global variable */
+
+nav a:link, nav a:visited{
+  color: red;
+}
+nav :where(a:link, a:visited){
+  color: red;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root{
+    --BGCOLOR: black;
+    --YELLOWCOLOR: red;
+  }
+}
+@media screen and (prefers-color-scheme: light) {
+  :root{
+    --BGCOLOR: green;
+    --YELLOWCOLOR: yellow;
+  }
+}
+
+
+
 /*------------------------ COMPONENTs ----------------------------------*/
 
 /* default container */
@@ -58,7 +82,7 @@ body {
   color: #fff;
   font-size: 1.6rem;
   letter-spacing: 0.2px;
-  background-color: #f3ba00;
+  background-color: var(--YELLOWCOLOR);
   border-radius: 0 6px 6px 0;
   border: 0;
   transition: background-color 0.3s;
@@ -86,7 +110,7 @@ input[type="text"]:focus {
   font-weight: 400;
   color: #101115;
   display: inline-block;
-  background-color: #f3ba00;
+  background-color: var(--YELLOWCOLOR);
   padding: 0.5rem 0.5rem;
   left: 1px;
   position: absolute;
@@ -103,7 +127,7 @@ input[type="text"]:focus {
   font-weight: 400;
   color: #101115;
   display: inline-block;
-  background-color: #f3ba00;
+  background-color: var(--YELLOWCOLOR);
   padding: 0.5rem 0.5rem;
   left: 1px;
   position: absolute;
@@ -116,7 +140,7 @@ input[type="text"]:focus {
 /* -------------------------HEADER SECTION---------------------------- */
 
 .header {
-  background-color: #1ac073;
+  background-color: var(--BGCOLOR);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -172,7 +196,7 @@ input[type="text"]:focus {
   display: inline-block;
   width: 8px;
   height: 8px;
-  background-color: #f3ba00;
+  background-color: var(--YELLOWCOLOR);
   border-radius: 50%;
   position: absolute;
   right: 0px;
@@ -183,7 +207,7 @@ input[type="text"]:focus {
 /*------------------------------------ LANDING PAGE----------------------- */
 
 .character-section {
-  background-color: #1ac073;
+  background-color: var(--BGCOLOR);
   padding: 4.8rem 4.8rem;
 }
 
@@ -406,7 +430,7 @@ div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #f3ba00;
+  border: 2px solid var(--YELLOWCOLOR);
   border-radius: 7px;
 }
 
@@ -458,7 +482,7 @@ div {
 }
 
 .right-btn {
-  fill: #1ac073;
+  fill: var(--BGCOLOR);
   position: absolute;
   right: 45%;
   top: 50%;
@@ -502,11 +526,11 @@ div {
 }
 
 .circle {
-  fill: #1ac073;
+  fill: var(--BGCOLOR);
 }
 
 .left-btn {
-  fill: #1ac073;
+  fill: var(--BGCOLOR);
 }
 
 .right-btn:hover,
@@ -515,7 +539,7 @@ div {
 }
 
 .filled-circle {
-  background-color: #1ac073;
+  background-color: var(--BGCOLOR);
   border-radius: 50% 50%;
 }
 
@@ -525,7 +549,7 @@ div {
   font-size: 1.8rem;
   color: #fff;
   width: 20rem;
-  background-color: #1ac073;
+  background-color: var(--BGCOLOR);
   margin: 0 auto;
   padding: 1.6rem 3.2rem;
   border-radius: 8px;
@@ -698,7 +722,7 @@ form {
   font-size: 1.6rem;
   color: #fff;
   width: 16rem;
-  background-color: #1ac073;
+  background-color: var(--BGCOLOR);
   padding: 1.2rem 2.4rem;
   border-radius: 8px;
   border: none;
@@ -798,9 +822,9 @@ label {
   width: 18.4rem;
   padding: 0 2rem;
   background-color: #f7f8fa;
-  color: #1ac073;
+  color: var(--BGCOLOR);
   font-size: 1.6rem;
-  border: 3px solid #1ac073;
+  border: 3px solid var(--BGCOLOR);
   border-radius: 8px;
 }
 
